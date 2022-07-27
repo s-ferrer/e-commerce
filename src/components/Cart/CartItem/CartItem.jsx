@@ -12,13 +12,13 @@ import useStyles from "./style";
 
 const CartItem = ({ item }) => {
   const classes = useStyles();
+
   return (
-    <Card>
+    <Card className="cat-item">
       <CardMedia
-        className={classes.media}
-        image={CartItem.image?.url}
+        image={item.image?.url}
         alt={item.name}
-        style={{ minHeight: 300 }}
+        className={classes.media}
       />
       <CardContent className={classes.CardContent}>
         <Typography variant="h4">{item.name}</Typography>

@@ -19,7 +19,7 @@ const Product = ({ product, onAddToCart }) => {
         className={classes.media}
         image={product.image?.url}
         alt={product.name}
-        style={{ minHeight: 300 }}
+        style={{ minHeight: 100 }}
         title={product.name}
       />
 
