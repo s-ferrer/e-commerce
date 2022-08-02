@@ -36,11 +36,10 @@ const App = () => {
     setCart(cart);
   };
 
-  /*const refreshCart = async () => {
+  const refreshCart = async () => {
     const newCart = await commerce.cart.refresh();
     setCart(newCart);
   };
-*/
 
   useEffect(() => {
     fetchProducts();
@@ -49,9 +48,8 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div style={{ display: "flex" }}>
         <Navbar totalItems={cart.total_items} />
-
         <Routes>
           <Route
             exact
