@@ -1,4 +1,6 @@
 import React from "react";
+/*import PropTypes from "prop-types";*/
+
 import {
   Typography,
   Button,
@@ -13,15 +15,15 @@ import useStyles from "./style";
 const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
   const classes = useStyles();
 
-  const handleUpdateCartQty = (lineItemId, newQuantity) =>
+  /*const handleUpdateCartQty = (lineItemId, newQuantity) =>
     onUpdateCartQty(lineItemId, newQuantity);
-
   const handleRemoveFromCart = (lineItemId) => onRemoveFromCart(lineItemId);
+*/
 
   return (
     <Card className="cat-item">
       <CardMedia
-        image={item.image?.url}
+        image={item.image.url}
         alt={item.name}
         className={classes.media}
       />
@@ -31,12 +33,12 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
           {item.line_total.formatted_with_symbol}
         </Typography>
       </CardContent>
-      <CardActions className={classes.cardActions}>
+      <CardActions className={classes.CardActions}>
         <div className={classes.buttons}>
           <Button
             type="button"
             size="small"
-            onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}
+            onClick={() => onUpdateCartQty(item.id, item.quantity - 1)}
           >
             -
           </Button>
@@ -44,16 +46,16 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
           <Button
             type="button"
             size="small"
-            onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}
+            onClick={() => onUpdateCartQty(item.id, item.quantity + 1)}
           >
             +
           </Button>
         </div>
         <Button
-          varient="contained"
+          variant="contained"
           type="button"
           color="secondary"
-          onClick={() => handleRemoveFromCart(item.id)}
+          onClick={() => onRemoveFromCart(item.id)}
         >
           Remove
         </Button>
