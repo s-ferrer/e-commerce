@@ -10,6 +10,7 @@ import {
 
 import { useForm, FormProvider } from "react-hook-form";
 import { Link } from "react-router-dom";
+
 import { commerce } from "../../lib/commerce";
 import FormInput from "./CustomTextField";
 
@@ -20,6 +21,7 @@ const AddressForm = ({ checkoutToken, test }) => {
   const [shippingSubdivision, setShippingSubdivision] = useState("");
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState("");
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
@@ -79,6 +81,7 @@ const AddressForm = ({ checkoutToken, test }) => {
       <Typography variant="h6" gutterBottom>
         Shipping Address
       </Typography>
+
       <FormProvider {...methods}>
         <form
           onSubmit={methods.handleSubmit((data) =>
