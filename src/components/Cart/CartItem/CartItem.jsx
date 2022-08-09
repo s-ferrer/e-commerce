@@ -1,6 +1,4 @@
 import React from "react";
-/*import PropTypes from "prop-types";*/
-
 import {
   Typography,
   Button,
@@ -10,15 +8,10 @@ import {
   CardMedia,
 } from "@material-ui/core";
 
-import useStyles from "./style";
+import useStyles from "./styles";
 
 const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
   const classes = useStyles();
-
-  /*const handleUpdateCartQty = (lineItemId, newQuantity) =>
-    onUpdateCartQty(lineItemId, newQuantity);
-  const handleRemoveFromCart = (lineItemId) => onRemoveFromCart(lineItemId);
-*/
 
   return (
     <Card className="cat-item">
